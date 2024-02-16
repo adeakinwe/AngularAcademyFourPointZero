@@ -2,5 +2,11 @@
 
 <p>List of cities I've visited</p>
 <ul>
-    <li *ngFor="let city of cities">{{city}}</li>
+    <li *ngFor="let city of cities">{{city | uppercase}}</li>
 </ul>
+<ol>
+    <li *ngFor="let state of statesVisited">{{state}}</li>
+</ol>
+<div style="margin-top: 250px;" *ngIf="numOfCities >= 5">
+    <app-footer [numOfCities]="numOfCities"></app-footer>
+</div>
