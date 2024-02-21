@@ -14,12 +14,14 @@ cities: Array<string> = [];
 numOfCities: number = 0;
 statesVisited: string[] = [];
 properties: any[];
+numOfCitiesCountEmitted: number; //this property will be binded to the output from the child component
 
 constructor(){
 this.myCity = 'Lagos';
 this.cities = ['Osogbo','Enugu','Kaduna','Benin','Akure'];
 this.numOfCities = this.cities.length;
 this.properties = [false, 56, "me"];
+this.numOfCitiesCountEmitted = 0;
 }
 
 ngOnInit(){
@@ -30,4 +32,7 @@ getStatesVisited(){
   this.statesVisited = ['Lagos', 'Anambra', 'Kano', 'Ekiti', 'Plateau'];
 }
 
+numOfCitiesCount(num: number){
+this.numOfCitiesCountEmitted = num;
+}
 }

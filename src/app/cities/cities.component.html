@@ -7,6 +7,11 @@
 <ol>
     <li *ngFor="let state of statesVisited">{{state}}</li>
 </ol>
+<div class="div">
+    <h2>From the Child To Parent Component (Output)</h2>
+    <h3>I've visited {{numOfCitiesCountEmitted}} cities</h3>
+</div>
+<app-citiesvisited [numOfCities]="numOfCities" (numOfCitiesVisitedEmit)="numOfCitiesCount($event)"></app-citiesvisited>
 <div style="margin-top: 250px;" *ngIf="numOfCities >= 5">
-    <app-footer [numOfCities]="numOfCities"></app-footer>
+    <app-footer></app-footer>
 </div>
