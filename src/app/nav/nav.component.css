@@ -4,4 +4,17 @@
 
 .nav a {
     text-decoration: none;
+    text-align: center;
 }
+
+.header{
+    background: #789fda;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .header a{
+    color: #fff;
+    text-decoration: none;
+  }
