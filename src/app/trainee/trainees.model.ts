@@ -12,13 +12,23 @@ export interface ITraineesExt extends ITrainees{
 }
 
 export class Trainees {
-  constructor(
-    public id: number,
-    public name: string,
-    public age: number,
-    public favouriteCourse: string,
-    public state?: string,
-    public CGPA?: number,
-    public favouriteQuote?: string
-  ) {}
+   id: number;
+   name: string;
+   age: number;
+   email?: string;
+   favouriteCourse: string;
+   state?: string;
+   CGPA?: number;
+   favouriteQuote?: string;
+  constructor(id: number, name: string, age: number, email: string, favouriteCourse: string, state?: string, CGPA?: number, favouriteQuote?: string
+  ) {
+    this.id = id;
+    this.name = name;
+    this.age = age;
+    this.email = email;
+    this.favouriteCourse = favouriteCourse;
+    this.state = state;
+    this.CGPA = CGPA;
+    this.favouriteQuote = favouriteQuote;
+  }
 }
