@@ -1,0 +1,27 @@
+<body class="body">
+    <h1 class="">Trainees</h1>
+<ul>
+    <li *ngFor="let trainee of traineesList"> {{trainee.id}} - {{trainee.name}}</li>
+</ul>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 mt-3 mb-2" *ngFor="let trainee of traineesList">
+        <div class="card" style="width: 25rem; background-color:honeydew; font-family: cursive;">
+          <!-- <img [src]="episode.poster" class="card-img-top" alt="..."> -->
+          <div>
+            <div class="card-body">
+              <h5 class="card-title">{{trainee.name}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Age: {{trainee.age}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Favourite Course: {{trainee.favouriteCourse}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">CGPA: {{trainee.CGPA}}</h6>
+              <h6 class="card-footer mb-1 text-muted">Academy 4.0</h6>
+              <p class="card-text"></p>
+              <a href="#" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

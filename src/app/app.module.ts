@@ -7,6 +7,9 @@ import { CitiesComponent } from './cities/cities.component';
 import { FooterComponent } from './footer/footer.component';
 import { CitiesvisitedComponent } from './citiesvisited/citiesvisited.component';
 import { NavComponent } from './nav/nav.component';
+import { TraineeComponent } from './trainee/trainee.component';
+import { TraineeService } from './trainee/trainee.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +17,15 @@ import { NavComponent } from './nav/nav.component';
     CitiesComponent,
     FooterComponent,
     CitiesvisitedComponent,
-    NavComponent
+    NavComponent,
+    TraineeComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TraineeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
