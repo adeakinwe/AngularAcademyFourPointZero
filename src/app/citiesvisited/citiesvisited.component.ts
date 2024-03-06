@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-citiesvisited',
@@ -10,8 +11,11 @@ export class CitiesvisitedComponent {
 @Output() numOfCitiesVisitedEmit: EventEmitter<number>; //this is to be emitted as an output to the parent component
 citiesCount: number = 0;
 
-constructor(){
+id: string | undefined;
+
+constructor( private route: ActivatedRoute){
   this.numOfCitiesVisitedEmit = new EventEmitter<number>();
+  this.route.params.subscribe((param) => { this.id = param['id']}); //retrieve the value of our route parameter
 }
 
 increaseCitiesCount(){

@@ -1,0 +1,22 @@
+.main {
+    text-align: center;
+}
+
+.class1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.class2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: gold;
+    padding-bottom: 10px;
+}
+
+.marq {
+    background-color: green;
+    text-align: center;
+}

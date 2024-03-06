@@ -7,6 +7,8 @@ import { CitiesComponent } from './cities/cities.component';
 import { FooterComponent } from './footer/footer.component';
 import { CitiesvisitedComponent } from './citiesvisited/citiesvisited.component';
 import { NavComponent } from './nav/nav.component';
+import { HomeComponent } from './home/home.component';
+import { TraineeComponent } from './trainee/trainee.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { NavComponent } from './nav/nav.component';
     CitiesComponent,
     FooterComponent,
     CitiesvisitedComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent,
+    TraineeComponent
   ],
   imports: [
     BrowserModule,
