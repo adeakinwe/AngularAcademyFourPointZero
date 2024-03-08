@@ -9,6 +9,7 @@ import { CitiesvisitedComponent } from './citiesvisited/citiesvisited.component'
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { TraineeComponent } from './trainee/trainee.component';
+import { TraineeService } from './trainee/trainee.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { TraineeComponent } from './trainee/trainee.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TraineeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

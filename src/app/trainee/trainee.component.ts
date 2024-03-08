@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Trainees } from './trainees.model';
+import { ITrainees, ITraineesExt } from './itrainee';
+import { TraineeService } from './trainee.service';
 
 @Component({
   selector: 'app-trainee',
@@ -9,25 +11,23 @@ import { Trainees } from './trainees.model';
 export class TraineeComponent implements OnInit{
 
   trainees: Trainees[] = [];
-
+  // traineeList: ITrainees[] = [];
+  traineeList: ITraineesExt[] = [];
   //id , name, age, email, favouriteCourse
 
-  constructor(){
+  constructor( private traineeService: TraineeService){
   }
 
   ngOnInit(){
     this.getTrainees();
+    this.getTraineeList();
   }
 
-  getTrainees() : Trainees[]{
-    this.trainees = [
-    { id: 1, name: "Josephine", age: 24, email: 'josephine@gmail.com', favouriteCourse: 'Angular', isMarried: true},
-    { id: 2, name: "Olaoluwa", age: 21, email: 'josephine@gmail.com', favouriteCourse: 'C#'},
-    { id: 3, name: "Benjamin", age: 22, email: 'josephine@gmail.com', favouriteCourse: 'React'},
-    { id: 4, name: "Eniola", age: 26, email: 'josephine@gmail.com', favouriteCourse: 'Angular'},
-    { id: 5, name: "Tukur", age: 20, email: 'josephine@gmail.com', favouriteCourse: 'SQL'},
-    { id: 6, name: "Ifeoluwa", age: 23, email: 'josephine@gmail.com', favouriteCourse: 'React'}
-    ]  
-    return this.trainees;
+  getTrainees(){
+    this.trainees = this.traineeService.getTrainees();
+  }
+
+  getTraineeList(){
+    this.traineeList = this.traineeService.getTraineeList();
   }
 }
