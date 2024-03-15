@@ -10,6 +10,7 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { TraineeComponent } from './trainee/trainee.component';
 import { TraineeService } from './trainee/trainee.service';
+import { TraineeCardComponent } from './trainee-card/trainee-card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TraineeService } from './trainee/trainee.service';
     CitiesvisitedComponent,
     NavComponent,
     HomeComponent,
-    TraineeComponent
+    TraineeComponent,
+    TraineeCardComponent
   ],
   imports: [
     BrowserModule,
