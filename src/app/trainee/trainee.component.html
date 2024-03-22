@@ -3,9 +3,6 @@
 <ul>
     <li *ngFor="let trainee of traineesList"> {{trainee.id}} - {{trainee.name}}</li>
 </ul>
-<ul>
-    <li *ngFor="let trainee of traineeList"> {{trainee.id}} - {{trainee.name}} - {{trainee.age}} - {{trainee.email}} - {{trainee.favouriteCourse}}</li>
-</ul>
 
 <div class="container">
     <div class="row">
@@ -64,7 +61,7 @@
         </tr>            
     </thead>
     <tbody>
-        <tr *ngFor="let trainee of traineeList; let indx=index">
+        <tr *ngFor="let trainee of traineesList; let indx=index">
             <td>{{indx + 1}}</td>
             <td>{{trainee.name}}</td>
             <td>{{trainee.age}}</td>
