@@ -11,6 +11,7 @@ import { TraineeService } from '../trainee/trainee.service';
 export class TraineeCardComponent implements OnInit{
   trainees: Trainees[] = [];
   traineeList: ITraineesExt[] = [];
+  allTrainees: ITraineesExt[] = [];
 
   constructor(private traineeService: TraineeService){
 
@@ -19,6 +20,7 @@ export class TraineeCardComponent implements OnInit{
   ngOnInit(): void {
     this.getTraineeList();
     this.getTrainees();
+    this.getAllTrainees();
   }
 
   getTrainees(){
@@ -27,5 +29,10 @@ export class TraineeCardComponent implements OnInit{
 
   getTraineeList(){
     this.traineeList = this.traineeService.getTraineeList()
+  }
+
+  getAllTrainees(){
+    //this.allTrainees.push(...this.trainees, ...this.traineeList);
+    this.allTrainees = [...this.trainees, ...this.traineeList];
   }
 }

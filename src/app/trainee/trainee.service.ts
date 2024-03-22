@@ -10,7 +10,7 @@ export class TraineeService {
 
   getTrainees() : Trainees[]{
     let trainees = [
-    { id: 1, name: "Josephine", age: 24, email: 'josephine@gmail.com', favouriteCourse: 'Angular', isMarried: true},
+    { id: 1, name: "Josephine", age: 24, email: 'josephine@gmail.com', favouriteCourse: 'Angular', isMarried: true, image:'assets/pic1.jpg'},
     { id: 2, name: "Olaoluwa", age: 21, email: 'josephine@gmail.com', favouriteCourse: 'C#'},
     { id: 3, name: "Benjamin", age: 22, email: 'josephine@gmail.com', favouriteCourse: 'React'},
     { id: 4, name: "Eniola", age: 26, email: 'josephine@gmail.com', favouriteCourse: 'Angular'},
@@ -22,7 +22,7 @@ export class TraineeService {
 
   getTraineeList(): ITraineesExt[]{
     let traineeList = [
-      { id: 1, name: "Esther", age: 24, email: 'josephine@gmail.com', favouriteCourse: 'Angular', isMarried: true},
+      { id: 1, name: "Esther", age: 24, email: 'josephine@gmail.com', favouriteCourse: 'Angular', isMarried: true, image: 'assets/pic2.jpg'},
       { id: 2, name: "Moyo", age: 21, email: 'josephine@gmail.com', favouriteCourse: 'C#'},
       { id: 3, name: "Oluwaseun", age: 22, email: 'josephine@gmail.com', favouriteCourse: 'React'},
       { id: 4, name: "Kelvin", age: 26, email: 'josephine@gmail.com', favouriteCourse: 'Angular'},

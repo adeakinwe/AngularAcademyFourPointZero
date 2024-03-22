@@ -5,6 +5,7 @@ export interface ITrainees {
     email: string;
     favouriteCourse: string;
     isMarried?: boolean;
+    image?: string;
 }
 
 export interface ITraineesExt extends ITrainees{

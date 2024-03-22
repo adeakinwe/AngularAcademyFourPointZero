@@ -1,10 +1,10 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-4 mt-2" *ngFor="let trainee of trainees">
+        <div class="col-md-3 mt-2" *ngFor="let trainee of allTrainees">
             <div class="card" style="width: 18rem; background-color: honeydew; font-family: cursive;">
-                <!-- <img src="..." class="card-img-top" alt="..."> -->
                 <div class="card-body">
                   <h5 class="card-title">{{trainee.name}}</h5>
+                  <img src="../../{{trainee.image}}" class="card-img-top mb-2" style="width: 30%;" alt="{{trainee.name}} image">
                   <h6 class="card-subtitle">Age: {{trainee.age}}</h6>
                   <h6 class="card-subtitle">Email: {{trainee.email}}</h6>
                   <h6 class="card-subtitle">Fav Course: {{trainee.favouriteCourse}}</h6>

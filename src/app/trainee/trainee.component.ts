@@ -14,6 +14,7 @@ export class TraineeComponent implements OnInit{
   // traineeList: ITrainees[] = [];
   traineeList: ITraineesExt[] = [];
   //id , name, age, email, favouriteCourse
+  allTrainees: ITraineesExt[] = [];
 
   constructor( private traineeService: TraineeService){
   }
@@ -21,6 +22,7 @@ export class TraineeComponent implements OnInit{
   ngOnInit(){
     this.getTrainees();
     this.getTraineeList();
+    this.getAllTrainees();
   }
 
   getTrainees(){
@@ -29,5 +31,9 @@ export class TraineeComponent implements OnInit{
 
   getTraineeList(){
     this.traineeList = this.traineeService.getTraineeList();
+  }
+
+  getAllTrainees(){
+    this.allTrainees.push(...this.trainees, ...this.traineeList); //spread syntax
   }
 }
