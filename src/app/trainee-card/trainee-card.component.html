@@ -10,8 +10,43 @@
                   <h6 class="card-subtitle">Fav Course: {{trainee.favouriteCourse}}</h6>
                   <p class="card-text card-footer text-muted">Academy 4.0</p>
                   <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                  <button (click)="viewTrainee(trainee.id)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#traineeModal">View Details</button>
                 </div>
               </div>
         </div>
     </div>
+</div>
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#traineeModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="traineeModal" tabindex="-1" role="dialog" aria-labelledby="traineeModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="traineeModalLabel" style="font-weight: bold;">{{viewedTrainee.name}}</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card" style="width: 18rem; background-color: honeydew; font-family: cursive; width: 30rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{viewedTrainee.name}}</h5>
+            <img src="../../{{viewedTrainee.image}}" class="card-img-top mb-2" style="width: 50%;" alt="{{viewedTrainee.name}} image">
+            <h6 class="card-subtitle">Age: {{viewedTrainee.age}}</h6>
+            <h6 class="card-subtitle">Email: {{viewedTrainee.email}}</h6>
+            <h6 class="card-subtitle">Fav Course: {{viewedTrainee.favouriteCourse}}</h6>
+            <p class="card-text card-footer text-muted">Academy 4.0</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

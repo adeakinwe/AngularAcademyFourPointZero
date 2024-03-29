@@ -11,6 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { TraineeComponent } from './trainee/trainee.component';
 import { TraineeService } from './trainee/trainee.service';
 import { TraineeCardComponent } from './trainee-card/trainee-card.component';
+import { FetchComponent } from './fetch/fetch.component';
+import { FetchService } from './fetch/fetch.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,13 +24,15 @@ import { TraineeCardComponent } from './trainee-card/trainee-card.component';
     NavComponent,
     HomeComponent,
     TraineeComponent,
-    TraineeCardComponent
+    TraineeCardComponent,
+    FetchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [TraineeService],
+  providers: [TraineeService,FetchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

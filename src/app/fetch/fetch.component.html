@@ -1,0 +1,19 @@
+<table class="table table-striped table-hover table-bordered mt-5 table-responsive caption-top">
+    <caption style="font-size: 30px;">Fetched Comments</caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of allComment; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.body}}</td>
+      </tr>
+    </tbody>
+  </table>

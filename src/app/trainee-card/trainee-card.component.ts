@@ -12,7 +12,7 @@ export class TraineeCardComponent implements OnInit{
   trainees: Trainees[] = [];
   traineeList: ITraineesExt[] = [];
   allTrainees: ITraineesExt[] = [];
-
+  viewedTrainee: any = {};
   constructor(private traineeService: TraineeService){
 
   }
@@ -35,4 +35,16 @@ export class TraineeCardComponent implements OnInit{
     //this.allTrainees.push(...this.trainees, ...this.traineeList);
     this.allTrainees = [...this.trainees, ...this.traineeList];
   }
+
+  viewTrainee(id: number){
+    this.viewedTrainee = this.allTrainees.filter(f => f.id == id);
+    this.viewedTrainee = this.viewedTrainee[0];
+    //console.log("viewedTrainee: ", this.viewedTrainee[0]);
+    console.log("viewedTrainee: ", this.viewedTrainee);
+  }
+
+  // viewTrainee(id: number, name: string){
+  //   this.viewedTrainee = this.allTrainees.filter(f => f.id == id && f.name == name);
+  //   console.log("viewedTrainee: ", this.viewedTrainee);
+  // }
 }
