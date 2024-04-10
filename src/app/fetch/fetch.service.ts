@@ -22,4 +22,10 @@ private baseUrl: string = 'https://jsonplaceholder.typicode.com';
   getAllPosts(): Observable<any>{
     return this.http.get(`${this.baseUrl}/posts`)
   }
+
+  submitTraineeForm(form: any){
+    return this.http.post(`${this.baseUrl}/posts`, {method: 'POST', form, headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    }});
+  }
 }

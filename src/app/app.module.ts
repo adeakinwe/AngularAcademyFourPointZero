@@ -14,6 +14,9 @@ import { TraineeCardComponent } from './trainee-card/trainee-card.component';
 import { FetchComponent } from './fetch/fetch.component';
 import { FetchService } from './fetch/fetch.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TemplateFormsComponent } from './template-forms/template-forms.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,16 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     TraineeComponent,
     TraineeCardComponent,
-    FetchComponent
+    FetchComponent,
+    TemplateFormsComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [TraineeService,FetchService],
   bootstrap: [AppComponent]

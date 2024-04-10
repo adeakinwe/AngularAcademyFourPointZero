@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { TraineeComponent } from './trainee/trainee.component';
 import { TraineeCardComponent } from './trainee-card/trainee-card.component';
 import { FetchComponent } from './fetch/fetch.component';
+import { TemplateFormsComponent } from './template-forms/template-forms.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'fetch', component: FetchComponent },
   // { path: 'footer', component: FooterComponent},
   { path: 'cities/:id', component: CitiesvisitedComponent}, //route parameter
+  { path: 'template-form', component: TemplateFormsComponent}, 
+  { path: 'reactive-form', component: ReactiveFormsComponent}, 
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', redirectTo: 'cities', pathMatch: 'full'} //a wild card route that redirects to a configured path
 ];
