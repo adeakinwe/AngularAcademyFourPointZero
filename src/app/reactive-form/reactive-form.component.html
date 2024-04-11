@@ -1,0 +1,36 @@
+<div class="container">
+    <h2 class="heading">Reactive Form</h2>
+    <form [formGroup]="traineeForm" (ngSubmit)="submitTraineeForm()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" formControlName="name">
+            <div *ngIf="traineeForm?.get('name')?.touched && traineeForm?.get('name')?.invalid" class="text-danger">Name is required</div>
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" class="form-control" formControlName="age">
+            <div *ngIf="traineeForm?.get('age')?.touched && traineeForm?.get('age')?.invalid" class="text-danger">Please enter a valid age (between 18 and 30)</div>
+        </div>
+        <div class="form-group">
+            <label for="email">e-mail</label>
+            <input type="email" id="email" class="form-control" formControlName="email">
+            <div *ngIf="traineeForm?.get('email')?.touched && traineeForm?.get('email')?.invalid" class="text-danger">Please enter a valid email</div>
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile</label>
+            <input type="tel" id="mobile" class="form-control" formControlName="mobile">
+            <div *ngIf="traineeForm?.get('mobile')?.touched && traineeForm?.get('mobile')?.invalid" class="text-danger">Please enter a valid mobile number (11 digits)</div>
+        </div>
+        <div class="form-group">
+            <label for="favCourse">Fav Course</label>
+            <select id="favCourse" class="form-control" formControlName="favCourse">
+                <option value="Angular">Angular</option>
+                <option value="SQL">SQL</option>
+                <option value="SQA">SQA</option>
+                <option value="Accounting">Accounting</option>
+            </select>
+            <div *ngIf="traineeForm?.get('favCourse')?.touched && traineeForm?.get('favCourse')?.invalid" class="text-danger">Please select a favourite course</div>
+        </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 10px;" [disabled]="traineeForm.invalid">Submit</button>
+    </form>
+</div>

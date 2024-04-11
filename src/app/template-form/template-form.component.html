@@ -1,0 +1,39 @@
+<div class="container">
+    <h2 class="heading">Template Driven Form</h2>
+    <form #traineeForm="ngForm" (ngSubmit)="submitTraineeForm(traineeForm)">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="form-control" [(ngModel)]="traineeDetails.name" required>
+            <div *ngIf="traineeForm.controls['name']?.touched && traineeForm.controls['name'].invalid" class="text-danger">Name is required</div>
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" class="form-control" [(ngModel)]="traineeDetails.age" required
+            min="18" max="30">
+            <div *ngIf="traineeForm.controls['age']?.touched && traineeForm.controls['age'].invalid" class="text-danger">Age is required</div>
+        </div>
+        <div class="form-group">
+            <label for="email">e-mail</label>
+            <input type="email" id="email" name="email" class="form-control" [(ngModel)]="traineeDetails.email" required>
+            <div *ngIf="traineeForm.controls['email']?.touched && traineeForm.controls['email'].invalid" class="text-danger">email is required</div>
+        </div>
+        <!-- <div class="form-group">
+            <input type="checkbox" id="nin" name="nin" class="form-control" value="NIN">
+            <label for="male">NIN</label>
+            <br>
+            <input type="checkbox" id="votersCard" name="votersCard" class="form-control" value="Voters Card">
+            <label for="female">Voters Card</label>
+        </div> -->
+        <div class="form-group">
+            <label for="favCourse">Fav Course</label>
+            <select name="favCourse" id="favCourse" class="form-control" [(ngModel)]="traineeDetails.favCourse" required>
+                <option value="Angular">Angular</option>
+                <option value="SQL">SQL</option>
+                <option value="SQA">SQA</option>
+                <option value="Accounting">Accounting</option>
+            </select>
+            <div *ngIf="traineeForm.controls['favCourse']?.touched && traineeForm.controls['favCourse'].invalid" class="text-danger">Please select a favourite course</div>
+        </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+    </form>
+</div>
